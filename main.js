@@ -1,17 +1,22 @@
 /**
-                   Simulador Interactivo de una compra de ingredientes necesarios para hacer un completo.
+               Simulador Interactivo de una compra de productos necesarios para hacer un completo.
  */
 
 
-let ingrediente = 1
+let producto
 
+function sumaProductos(producto1, producto2, producto3, producto4, producto5) {
+  console.log(producto1 + producto2 + producto3 + producto4 + producto5)
+}
+
+sumaProductos(100, 200, 500, 1000, 1500)
 do {
-    ingrediente = prompt("Ingrese ingrediente para hacer un completo").toLowerCase()
+    producto = prompt("Ingrese ingrediente para hacer un completo").toLowerCase()
 
-    if (ingrediente != "pan" && ingrediente != "vienesa" && ingrediente != "tomate" && ingrediente != "palta" && ingrediente != "mayonesa") {
+    if (producto != "pan" && producto != "vienesa" && producto != "tomate" && producto != "palta" && producto != "mayonesa") {
         alert("Ingresa un ingrediente adecuado para hacer un completo")
     }
-    switch (ingrediente) {
+    switch (producto) {
         case "pan":
             alert("1er ingrediente seleccionado")
             break
@@ -29,4 +34,4 @@ do {
             break
     }
 
-} while (ingrediente != "pan" || ingrediente != "vienesa" || ingrediente != "tomate" || ingrediente != "palta" || ingrediente != "mayonesa")
+} while (producto != "pan" || producto != "vienesa" || producto != "tomate" || producto != "palta" || producto != "mayonesa")
