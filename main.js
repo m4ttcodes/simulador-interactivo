@@ -1,37 +1,28 @@
 /**
-               Simulador Interactivo de una compra de productos necesarios para hacer un completo.
+               Primera pre-entrega del proyecto final. Consiste en una simulación de consulta de componentes de hardware para pc.
  */
 
+                     //Class para luego crear los objetos    
 
-let producto
 
-function sumaProductos(producto1, producto2, producto3, producto4, producto5) {
-  console.log(producto1 + producto2 + producto3 + producto4 + producto5)
-}
 
-sumaProductos(100, 200, 500, 1000, 1500)
+                        //Inicio con un alert explicando
+
+alert("Contamos con una lista de componentes de hardware para PC, los cuales puedes valorar para definir cuales son los preferidos por la gente")
+
+let respuesta, respuestaSwitch
+
+                        //Consulto el tipo de búsqueda
+
 do {
-    producto = prompt("Ingrese ingrediente para hacer un completo").toLowerCase()
-
-    if (producto != "pan" && producto != "vienesa" && producto != "tomate" && producto != "palta" && producto != "mayonesa") {
-        alert("Ingresa un ingrediente adecuado para hacer un completo")
+    respuesta = parseFloat(prompt(" Ingrese un número del tipo de búsqueda que desea realizar, de acuerdo a la clasificación del componente.\n Placa base. Ingresa 1\n Procesador(CPU). Ingresa 2\n Tarjeta de videro(GPU). Ingresa 3\n Memoria RAM. Ingresa 4 "))
+    if ((respuesta != 1) && (respuesta!= 2) && (respuesta != 3) && (respuesta != 4)){
+        alert("Por favor ingrese un número válido")
     }
-    switch (producto) {
-        case "pan":
-            alert("1er ingrediente seleccionado")
-            break
-        case "vienesa":
-            alert("2do ingrediente seleccionado")
-            break
-        case "tomate":
-            alert("3er ingrediente seleccionado")
-            break
-        case "palta":
-            alert("4to ingrediente seleccionado")
-            break
-        case "mayonesa":
-            alert("5to ingrediente seleccionado")
-            break
-    }
+} while((respuesta != "1") &&(respuesta != 2) && (respuesta != 3) && (respuesta != 4))
 
-} while (producto != "pan" || producto != "vienesa" || producto != "tomate" || producto != "palta" || producto != "mayonesa")
+
+                        //Switch según número ingresado
+
+// switch(respuesta){
+    
